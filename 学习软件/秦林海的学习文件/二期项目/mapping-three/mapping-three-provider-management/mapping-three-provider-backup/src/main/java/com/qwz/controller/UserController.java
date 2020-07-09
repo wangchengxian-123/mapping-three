@@ -17,13 +17,10 @@ public class UserController extends CommonController<User> {
         return userService;
     }
 
-    @Override
-    public ResultData add(Map map) {
-        return super.add(map);
-    }
+
 
     public ResultData inserData(User user){
-        ResultData resultData = userService.insertData(user);
+        ResultData resultData = getBaseService().insertData(user);
         return resultData;
     }
 

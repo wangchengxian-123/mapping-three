@@ -10,11 +10,11 @@
         <module name="mapping-three-config" />
         <module name="mapping-three-provider-backup" />
         <module name="mapping-three-zuul" />
-        <module name="mapping-three-model" />
         <module name="mapping-three-common" />
         <module name="mapping-three-api" />
-        <module name="mapping-three-consumer-management" />
         <module name="mapping-three-mapper" />
+        <module name="mapping-three-consumer-management" />
+        <module name="mapping-three-model" />
         <module name="mapping-three-service" />
       </profile>
     </annotationProcessing>

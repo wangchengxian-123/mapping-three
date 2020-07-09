@@ -2,13 +2,13 @@ package com.qwz.base;
 import javax.xml.transform.Result;
 
 import static com.qwz.status.LoginStatus.*;
-import static com.qwz.status.OperationStatus.*;
 import static com.qwz.status.AddStatus.*;
 import static com.qwz.status.DeleteStatus.*;
 import static com.qwz.status.UpdateStatus.*;
 import static com.qwz.status.SelectStatus.*;
 import static com.qwz.status.ZuulStatus.*;
 import static com.qwz.status.FileStatus.*;
+
 /**
  * @author  qlh
  * @date   2020/7/8
@@ -305,7 +305,293 @@ public ResultData deleteDataNoExist(String msg){
     return resultData;
 }
 
+    /**
+     * @Description: 路由过滤成功
+     * @Author: Bing
+     * @Date: 2020/7/9 15:31
+     **/
+    protected ResultData operationZuulSuccess(){
+        ResultData resultData = new ResultData();
+        resultData.setCode(ZUUL_FILTER_SUCCESS.getCode());
+        resultData.setMsg(ZUUL_FILTER_SUCCESS.getMsg());
+        return  resultData;
+    }
 
+    /**
+     * @Description: 路由过滤成功,返回自定义消息
+     * @Author: Bing
+     * @Date: 2020/7/9 15:31
+     **/
+    protected ResultData operationZuulSuccess(String msg){
+        ResultData resultData = new ResultData();
+        resultData.setCode(ZUUL_FILTER_SUCCESS.getCode());
+        resultData.setMsg(msg);
+        return  resultData;
+    }
+
+    /**
+     * @Description: 路由过滤失败
+     * @Author: Bing
+     * @Date: 2020/7/9 15:32
+     **/
+    protected ResultData operationZuulFailed(){
+        ResultData resultData = new ResultData();
+        resultData.setCode(ZUUL_FILTER_FAILED.getCode());
+        resultData.setMsg(ZUUL_FILTER_FAILED.getMsg());
+        return resultData;
+    }
+
+    /**
+     * @Description: 路由过滤失败，返回自定义消息
+     * @Author: Bing
+     * @Date: 2020/7/9 15:32
+     **/
+    protected ResultData operationZuulFailed(String msg){
+        ResultData resultData = new ResultData();
+        resultData.setCode(ZUUL_FILTER_FAILED.getCode());
+        resultData.setMsg(msg);
+        return resultData;
+    }
+
+    /**
+     * @Description: token值存在
+     * @Author: Bing
+     * @Date: 2020/7/9 15:34
+     **/
+    protected ResultData operationZuulTokenSuccess(){
+        ResultData resultData = new ResultData();
+        resultData.setCode(ZUUL_FILTER_TOKEN_SUCCESS.getCode());
+        resultData.setMsg(ZUUL_FILTER_TOKEN_SUCCESS.getMsg());
+        return resultData;
+    }
+
+    /**
+     * @Description: token值存在,返回自定义消息
+     * @Author: Bing
+     * @Date: 2020/7/9 15:34
+     **/
+    protected ResultData operationZuulTokenSuccess(String msg){
+        ResultData resultData = new ResultData();
+        resultData.setCode(ZUUL_FILTER_TOKEN_SUCCESS.getCode());
+        resultData.setMsg(msg);
+        return resultData;
+    }
+
+    /**
+     * @Description: token值不存在
+     * @Author: Bing
+     * @Date: 2020/7/9 15:35
+     **/
+    protected ResultData operationZuulTokenFailed(){
+        ResultData resultData = new ResultData();
+        resultData.setCode(ZUUL_FILTER_TOKEN_FAILED.getCode());
+        resultData.setMsg(ZUUL_FILTER_TOKEN_FAILED.getMsg());
+        return  resultData;
+    }
+
+    /**
+     * @Description: token值不存在，返回自定义消息
+     * @Author: Bing
+     * @Date: 2020/7/9 15:35
+     **/
+    protected ResultData operationZuulTokenFailed(String msg){
+        ResultData resultData = new ResultData();
+        resultData.setCode(ZUUL_FILTER_TOKEN_FAILED.getCode());
+        resultData.setMsg(msg);
+        return  resultData;
+    }
+
+    /**
+     * @Description: 修改成功
+     * @Author: Bing
+     * @Date: 2020/7/9 15:46
+     **/
+    protected ResultData updateSuccess(){
+        ResultData resultData = new ResultData();
+        resultData.setCode(UPDATE_SUCCESS.getCode());
+        resultData.setMsg(UPDATE_SUCCESS.getMsg());
+        return resultData;
+    }
+
+    /**
+     * @Description: 修改成功，返回自定义信息
+     * @Author: Bing
+     * @Date: 2020/7/9 15:46
+     **/
+    protected ResultData updateSuccess(String msg){
+        ResultData resultData = new ResultData();
+        resultData.setCode(UPDATE_SUCCESS.getCode());
+        resultData.setMsg(msg);
+        return resultData;
+    }
+
+    /**
+     * @Description: 修改失败
+     * @Author: Bing
+     * @Date: 2020/7/9 15:46
+     **/
+    protected ResultData updateFailed(){
+        ResultData resultData = new ResultData();
+        resultData.setCode(UPDATE_FAILED.getCode());
+        resultData.setMsg(UPDATE_FAILED.getMsg());
+        return resultData;
+    }
+
+    /**
+     * @Description: 修改失败，返回自定义信息
+     * @Author: Bing
+     * @Date: 2020/7/9 15:46
+     **/
+    protected ResultData updateFailed(String msg){
+        ResultData resultData = new ResultData();
+        resultData.setCode(UPDATE_FAILED.getCode());
+        resultData.setMsg(msg);
+        return resultData;
+    }
+
+    /**
+     * @Description: 修改数据不存在
+     * @Author: Bing
+     * @Date: 2020/7/9 15:46
+     **/
+    protected ResultData updateNotExist(){
+        ResultData resultData = new ResultData();
+        resultData.setCode(UPDATE_DATA_NO_EXIST.getCode());
+        resultData.setMsg(UPDATE_DATA_NO_EXIST.getMsg());
+        return resultData;
+    }
+
+    /**
+     * @Description: 修改数据不存在，返回自定义消息
+     * @Author: Bing
+     * @Date: 2020/7/9 15:46
+     **/
+    protected ResultData updateNotExist(String msg){
+        ResultData resultData = new ResultData();
+        resultData.setCode(UPDATE_DATA_NO_EXIST.getCode());
+        resultData.setMsg(msg);
+        return resultData;
+    }
+
+    /**
+     * @Description: 文件上传成功
+     * @Author: Bing
+     * @Date: 2020/7/9 15:50
+     **/
+    protected ResultData fileSuccess(){
+        ResultData resultData = new ResultData();
+        resultData.setCode(FILE_UPLOAD_SUCCESS.getCode());
+        resultData.setMsg(FILE_UPLOAD_SUCCESS.getMsg());
+        return resultData;
+    }
+
+    /**
+     * @Description: 文件上传成功，返回自定义消息
+     * @Author: Bing
+     * @Date: 2020/7/9 15:50
+     **/
+    protected ResultData fileSuccess(String msg){
+        ResultData resultData = new ResultData();
+        resultData.setCode(FILE_UPLOAD_SUCCESS.getCode());
+        resultData.setMsg(msg);
+        return resultData;
+    }
+
+    /**
+     * @Description: 文件上传失败
+     * @Author: Bing
+     * @Date: 2020/7/9 15:50
+     **/
+    protected ResultData fileFailed(){
+        ResultData resultData = new ResultData();
+        resultData.setCode(FILE_UPLOAD_FAILED.getCode());
+        resultData.setMsg(FILE_UPLOAD_FAILED.getMsg());
+        return resultData;
+    }
+
+    /**
+     * @Description: 文件上传失败，返回自定义消息
+     * @Author: Bing
+     * @Date: 2020/7/9 15:50
+     **/
+    protected ResultData fileFailed(String msg){
+        ResultData resultData = new ResultData();
+        resultData.setCode(FILE_UPLOAD_FAILED.getCode());
+        resultData.setMsg(msg);
+        return resultData;
+    }
+
+    /**
+     * @Description: 查询成功
+     * @Author: Bing
+     * @Date: 2020/7/9 15:54
+     **/
+    protected ResultData selectSuccess(){
+        ResultData resultData = new ResultData();
+        resultData.setCode(SELECT_SUCCESS.getCode());
+        resultData.setMsg(SELECT_SUCCESS.getMsg());
+        return resultData;
+    }
+
+    /**
+     * @Description: 查询成功，返回自定义消息
+     * @Author: Bing
+     * @Date: 2020/7/9 15:54
+     **/
+    protected ResultData selectSuccess(String msg){
+        ResultData resultData = new ResultData();
+        resultData.setCode(SELECT_SUCCESS.getCode());
+        resultData.setMsg(msg);
+        return resultData;
+    }
+
+    /**
+     * @Description: 查询失败
+     * @Author: Bing
+     * @Date: 2020/7/9 15:54
+     **/
+    protected ResultData selectFailed(){
+        ResultData resultData = new ResultData();
+        resultData.setCode(SELECT_FAILED.getCode());
+        resultData.setMsg(SELECT_FAILED.getMsg());
+        return resultData;
+    }
+
+    /**
+     * @Description: 查询失败，返回自定义消息
+     * @Author: Bing
+     * @Date: 2020/7/9 15:54
+     **/
+    protected ResultData selectFailed(String msg){
+        ResultData resultData = new ResultData();
+        resultData.setCode(SELECT_FAILED.getCode());
+        resultData.setMsg(msg);
+        return resultData;
+    }
+
+    /**
+     * @Description: 查询数据不存在
+     * @Author: Bing
+     * @Date: 2020/7/9 15:54
+     **/
+    protected ResultData selectNotExist(){
+        ResultData resultData = new ResultData();
+        resultData.setCode(SELECT_DATA_NO_EXIST.getCode());
+        resultData.setMsg(SELECT_DATA_NO_EXIST.getMsg());
+        return resultData;
+    }
+
+    /**
+     * @Description: 查询数据不存在,返回自定义消息
+     * @Author: Bing
+     * @Date: 2020/7/9 15:54
+     **/
+    protected ResultData selectNotExist(String msg){
+        ResultData resultData = new ResultData();
+        resultData.setCode(SELECT_DATA_NO_EXIST.getCode());
+        resultData.setMsg(msg);
+        return resultData;
+    }
 
 
 
