@@ -6,14 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mapping-three-eureka-management" />
         <module name="mapping-three-config" />
         <module name="mapping-three-provider-backup" />
         <module name="mapping-three-zuul" />
+        <module name="mapping-three-eureka-6083" />
+        <module name="mapping-three-provider-mapping" />
         <module name="mapping-three-common" />
         <module name="mapping-three-api" />
         <module name="mapping-three-mapper" />
         <module name="mapping-three-consumer-management" />
+        <module name="mapping-three-eureka-6081" />
+        <module name="mapping-three-eureka-6082" />
         <module name="mapping-three-model" />
         <module name="mapping-three-service" />
       </profile>

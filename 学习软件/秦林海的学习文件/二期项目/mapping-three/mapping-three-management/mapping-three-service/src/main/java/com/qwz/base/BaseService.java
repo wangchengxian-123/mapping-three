@@ -23,12 +23,10 @@ import static com.qwz.staticproperties.OrderStatic.DESC;
 public abstract class BaseService<T> {
     // 全局变量，缓存子类的泛型类型
     private Class<T> cache = null;
-    @Autowired
-    private Mapper<T> mapper;
 
-    protected Mapper getMapper(){
-        return mapper;
-    }
+    public Mapper<T> mapper;
+
+    abstract protected Mapper getMapper();
 
     public ResultData insertData(T t){
         int insert = mapper.insert(t);
